@@ -8,6 +8,7 @@ import AtrasadosTable from '../components/AtrasadosTable';
 import DataTable from '../components/DataTable';
 import GoogleSyncConfig from '../components/GoogleSyncConfig';
 import ThemeToggle from '../components/ThemeToggle';
+import logoImg from '../assets/logo.png';
 
 export default function Home() {
   const { data, loading, error, processExcel, reload, syncMode, googleUrl, configureGoogleSync, lastSync } = useDashboardData();
@@ -53,9 +54,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/20">
-                <Factory className="h-6 w-6 text-primary" />
-              </div>
+              <img src={logoImg} alt="Pecsil Logo" className="h-12 w-auto object-contain bg-white p-1 rounded-md" />
               <div>
                 <h1 className="text-xl font-bold">Pecsil - Controle de Qualidade</h1>
                 <p className="text-sm text-muted-foreground">
